@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="#7CFC00"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_dial"
+        android:text="拨号"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:id="@+id/bt_delete"
+        android:text="删除"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:id="@+id/bt_deleteAll"
+        android:text="删除所有"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <Button
+        android:id="@+id/bt_AddContacts"
+        android:text="添加到联系人"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textColor="#050505"
+        android:text="正在通话中...."
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:paddingTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textColor="#050505"
+        android:text=""
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:id="@+id/bt_call_end"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:textSize="35sp"
+            android:text="挂断"/>
+        <Button
+            android:id="@+id/bt_call_answer"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:textSize="35sp"
+            android:text="接听"/>
+        <Button
+            android:id="@+id/bt_spea"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:textSize="35sp"
+            android:text="免提"/>
+        <Button
+            android:id="@+id/bt_stop_spea"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:textSize="35sp"
+            android:text="关闭免提"/>
+    </LinearLayout>
+
+</LinearLayout>

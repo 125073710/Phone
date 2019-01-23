@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color> <!--//白色-->
+    <color name="touming50">#50000000</color>
+    <color name="touming70">#70000000</color>
+    <color name="touming80">#80000000</color>
+    <color name="touming">#00000000</color>
+    <color name="backgroud">#ff0000ff</color> <!--背景颜色-->
+    <color name="black">#000000</color> <!--背景颜色-->
+
+    <!-- item背景所需要的颜色值 -->
+    <color name="bg_selected">#00CC33 </color><!-- 红色 -->
+    <color name="bg_pressed">#ffFFB6C1</color><!-- 粉色 -->
+    <color name="bg_normal">#ff0000ff</color>
+</resources>

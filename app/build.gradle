@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.tricheer.test.phone"
+        minSdkVersion 22
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    //签名工具
+    signingConfigs {
+        release {
+            storeFile file("../../Sign/Sign8939/Sign8939.jks")
+            storePassword '123456'
+            keyAlias 'Sign8939'
+            keyPassword '123456'
+        }
+
+        debug {
+            storeFile file("../../Sign/Sign8939/Sign8939.jks")
+            storePassword '123456'
+            keyAlias 'Sign8939'
+            keyPassword '123456'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile files('libs/framework.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile files('libs/classes.jar')
+}

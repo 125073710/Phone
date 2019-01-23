@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">PhoneUI</string>
+    <string name="emergency">EMERGENCY CALL</string>
+    <!--voicemil-->
+    <string name="voicemil_voicemil">Voicemail</string>
+    <string name="voicemil_message">Message</string>
+    <string name="voicemil_Setting">Setting</string>
+
+    <string name="voice_incoming">Incoming Call</string>
+    <string name="voice_keep">&#060;&#060;Playing&#062;&#062;[保留]stop</string>
+    <string name="voice_user_voice">User voice</string>
+
+    <string name="voice_setting_ansering">Answering time</string>
+    <string name="voice_seting_recording">Recording time</string>
+    <string name="voice_seting_greeting">Greeting Voice</string>
+    <string name="voice_seting_user">User Voice</string>
+    <string name="voice_seting_uservice_Recoding">Recoding</string>
+    <string name="voice_seting_uservice_play">Play</string>
+    <string name="voice_seting_uservice_delete">Delete</string>
+    <string name="voice_seting_uservice_reconding">Pick up receiver Please</string>
+    <string name="voice_seting_uservice_Greeting">Greeting voice Recording?</string>
+    <string name="voice_seting_uservice_Greeting_yes">YES</string>
+    <string name="voice_seting_uservice_Greeting_no">NO</string>
+    <string name="voice_seting_recoding_string">&#060;&#060;Recoduing&#062;&#062;</string>
+
+
+
+</resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_edit_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/bt_edit_dowm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下"
+            android:textSize="30sp" />
+
+
+        <Button
+            android:id="@+id/bt_edit_people_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ok"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fy_people_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ly_name"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:text=" N :"/>
+                <TextView
+                    android:id="@+id/tv_edit_name"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly_jpname"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:text="jpname :"/>
+                <TextView
+                    android:id="@+id/tv_edit_jpname"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ly_number1"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:text="phone1 :"/>
+                <TextView
+                    android:id="@+id/tv_edit_phone1"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_number2"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:text="phone2 :"/>
+                <TextView
+                    android:id="@+id/tv_edit_phone2"
+                    android:paddingLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_number3"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:text="phone3 :"/>
+                <TextView
+                    android:id="@+id/tv_edit_phone3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="40dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/fy_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_edit_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:text="[EDIT]Name"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/tv_edit_title_shurufa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:text="Aa"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white"/>
+            <EditText
+                android:id="@+id/ed_modify_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:maxLength="24"
+                android:textCursorDrawable="@drawable/sanjiao"
+                android:drawableRight="@drawable/sanjiao"
+                android:textColor="@color/white"
+                android:text=""/>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

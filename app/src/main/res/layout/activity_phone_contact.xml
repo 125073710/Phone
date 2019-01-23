@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tricheer.test.phone.phonebook.CustomView.SpellsSortView
+        android:id="@+id/ss_sort"
+        android:layout_width="30dp"
+        android:layout_marginTop="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_centerspell"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/tvstyle"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/bt_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="本机联系人"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bt_sim"
+                android:text="SIM联系人"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bt_insert"
+                android:text="添加联系人本机"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bt_insertSIM"
+                android:text="添加联系人SIM"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+        </ListView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

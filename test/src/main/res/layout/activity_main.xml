@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="telephony.internal.android.com.test.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_ok1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello1!" />
+
+        <Button
+            android:id="@+id/bt_ok2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello2!" />
+
+        <Button
+            android:id="@+id/bt_ok3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello3!" />
+          <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_weight="1"
+                android:text="12132132"
+                android:background="@drawable/itemselect"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/itemselect"
+                android:text="12132132"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="10"
+        android:text=""/>
+    <FrameLayout
+        android:id="@+id/fragment1"
+        android:name="telephony.internal.android.com.test.FragmentA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

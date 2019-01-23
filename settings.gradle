@@ -1,0 +1,1 @@
+include ':app', ':contactsmoudle', ':speeddiar', ':phoneui', ':test'

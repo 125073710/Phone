@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="telephony.internal.android.com.phoneui"
+    android:sharedUserId="android.uid.system">
+    <!-- 读取通话记录权限 -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_EMERGENCY" />
+    <!--电话状态监听 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!--接听电话权限-->
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <!-- 接电话监听-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <protected-broadcast android:name="android.intent.action.SIM_STATE_CHANGED" />
+    <protected-broadcast android:name="android.provider.Telephony.SPN_STRINGS_UPDATED" />
+    <!--免提-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- SD-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--录音-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+   <!-- 获取当前activity名字权限-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CallInRecords" />
+        <activity android:name=".PhoneBook" />
+        <activity
+            android:name=".DialerActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".Dialer.CallActivity"
+            android:launchMode="singleInstance"
+            android:process="com.android.phone" />
+        <!--android:process="com.android.phone" -->
+        <activity android:name=".ActivityPhoneBook.PhoneActivity" />
+        <activity
+            android:name=".ActivityPhoneBook.EditPhoneBookActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".ActivityPhoneBook.EditPhoneBookToastActivity"/>
+        <activity android:name=".ActivityPhoneBook.SIMCardActivity" />
+        <activity
+            android:name=".ActivityPhoneBook.EditSimPhoneBookActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ActivityPhoneBook.EditSimBookActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity android:name=".VoicemailActivity"/>
+        <activity android:name=".Voice.VoiceCallActivity"/>
+        <activity android:name=".Voice.VoiceMessageActivity"/>
+        <activity android:name=".Voice.VoiceSettingActivity"/>
+        <activity android:name=".Voice.SettingActivity.VoiceSettingAnswerActivity"/>
+        <activity android:name=".Voice.SettingActivity.VoiceSettingRecordingActivity"/>
+       <activity android:name=".Voice.SettingActivity.VoiceSettingUserActivity"/>
+
+
+        <!-- 配置内容提供者,android:authorities为该内容提供者取名作为在本应用中的唯一标识 -->
+        <provider
+            android:name=".ActivityPhoneBook.PhoneBookdb.ContactContentProvider"
+            android:authorities="com.tricheer.phone.phonebook"
+            android:exported="true" />
+        <!-- <receiver android:name=".Dialer.Receiver.PhoneReceiverStates">
+             <intent-filter>
+                 <action android:name="android.intent.action.PHONE_STATE" />
+                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                 &lt;!&ndash;拿起电话&ndash;&gt;
+                 <action android:name="android.hardware.input.action.HANDLE_UP" />
+                 &lt;!&ndash;  放下话筒&ndash;&gt;
+                 <action android:name="android.hardware.input.action.HANDLE_DOWN" />
+
+             </intent-filter>
+         </receiver>-->
+        <service android:name=".Dialer.PhoneService" />
+        <service android:name=".Dialer.Mute.ICallservice" />
+
+        <provider
+            android:name="telephony.internal.android.com.phoneui.Dialer.Blackdb.BlackContentProvider"
+            android:authorities="com.tricheer.blacklist"
+            android:exported="true" />
+
+        <provider
+            android:authorities="com.tricheer.voicelist"
+            android:name=".Voice.db.VoiceContentProvider"
+            android:exported="true"/>
+
+        <receiver android:name=".Dialer.Receiver.PhoneReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <!--拿起电话-->
+                <action android:name="android.hardware.input.action.HANDLE_UP" />
+                <!--  放下话筒-->
+                <action android:name="android.hardware.input.action.HANDLE_DOWN" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

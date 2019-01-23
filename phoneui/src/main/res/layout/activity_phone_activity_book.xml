@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/lv_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="左"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/lv_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="上"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/lv_dowm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="下"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/lv_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="右"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/lv_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ok"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/en_Phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <telephony.internal.android.com.phoneui.view.SpellsSortView
+            android:id="@+id/en_phone_sort"
+            android:layout_width="912dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02"
+            android:paddingRight="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="#100"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/jp_Phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <telephony.internal.android.com.phoneui.view.JpSpellsSortView
+            android:id="@+id/jp_phone_sort"
+            android:layout_width="912dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.02"
+            android:paddingRight="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_phone_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="#100"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_people_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+
+
+</LinearLayout>

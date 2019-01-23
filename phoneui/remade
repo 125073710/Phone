@@ -1,0 +1,10 @@
+1.添加未播放的添加到settings 数据库让Launcher获取 语音信箱未读条数
+SettingsUtil.getInstance().setdata(mContext,"NOT_PLAY",""+size);
+2. 设置语音应答时间
+ SettingsUtil.getInstance().setdata(mContext, "ANSWER_TIME", "0");
+3.设置录音时长
+ SettingsUtil.getInstance().setdataInt(mContext, "RECODING_TIME", 0);
+4.播放用户录音文件
+ /storage/sdcard0/Default_Voice/UerVoice.amr
+5.语音留守
+ SettingsUtil.getInstance().setdata(mContext, "isLiushou", "YES");
